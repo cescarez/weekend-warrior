@@ -33,37 +33,37 @@ describe "Roman Reverter" do
   end
 
   it "Check symbol pair" do
-    skip
+    # skip
     expect(Roman.reverter("II")).must_equal 2
   end
 
   it "Check symbol string" do
-    skip
+    # skip
     expect(Roman.reverter("XXX")).must_equal 30
   end
 
   it "Check mixed symbol string" do
-    skip
+    # skip
     expect (Roman.reverter("XVII")).must_equal 17
   end
 
   it "Check two hundred and twenty two" do
-    skip
+    # skip
      expect(Roman.reverter("CCXXII")).must_equal 222
   end
 
   it "Check first subtracted value" do
-    skip
+    # skip
     expect(Roman.reverter("IV")).must_equal 4
   end
 
   it "Check another subtracted value" do
-    skip
+    # skip
     expect(Roman.reverter("IX")).must_equal 9
   end
 
   it "Check 19" do
-    skip
+    # skip
     expect(Roman.reverter("XIX")).must_equal 19
   end
 
