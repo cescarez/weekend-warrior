@@ -8,16 +8,23 @@ class Roman
     return ArgumentError, "#{string} contains invalid character(s); cannot translate to Arabic representation." if !string.match?(/#{match_set}/i)
 
     parsed_string = string.chars
+
     sum = parsed_string.sum { |char| VALUES[char.to_sym] }
-
-    if string.match?(/#{match_set.reverse}/)
-      if string.length == 2
-        subtract = VALUES[parsed_string[0].to_sym] * 2
-      else
-      end
-    end
-
+    subtract = calc_subtract_num(string)
     return sum - subtract
+  end
+
+  private
+
+  def self.calc_subtract_num(string)
+    subtract = 0
+    subtract += 2 if string.match?(/[i][vxlcdm]/i)
+    subtract += 10 if string.match?(/[v][xlcdm]/i)
+    subtract += 20 if string.match?(/[x][lcdm]/i)
+    subtract += 100 if string.match?(/[l][cdm]/i)
+    subtract += 200 if string.match?(/[c][lm]/i)
+    subtract += 1000 if string.match?(/[d][m]/i)
+    return subtract
   end
 
 end

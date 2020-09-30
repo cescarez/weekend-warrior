@@ -68,17 +68,17 @@ describe "Roman Reverter" do
   end
 
   it "Check forty" do
-    skip
+    # skip
     expect(Roman.reverter("XL")).must_equal 40
   end
 
   it "Check five hundred and seventy six" do
-    skip
+    # skip
     expect( Roman.reverter("DLXXVI") ).must_equal 576
   end
 
   it  "Check four thousand nine hundred and ninety nine" do
-    skip
+    # skip
     expect( Roman.reverter("MMMMCMXCIX") ).must_equal 4999
   end
 end
